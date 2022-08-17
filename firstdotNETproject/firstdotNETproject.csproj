@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-  <StartupObject>firstdotNETproject.Ternery.Pos_Neg_Zero</StartupObject>
+  <StartupObject>firstdotNETproject.Loops.MagicNum</StartupObject>
   </PropertyGroup>
 
 </Project>
