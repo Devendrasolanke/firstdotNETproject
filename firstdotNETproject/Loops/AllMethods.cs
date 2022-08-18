@@ -58,6 +58,22 @@ namespace firstdotNETproject.Loops
 
         }
 
+        public int AvgOfDigits(int num1)
+        {
+            int c=0;
+            int cube = 0;
+            int cpy = num1;
+            for (int i = 1; i <= num1; i++)
+            {
+                int r = num1 % 10;
+                cube = cube + r;
+                num1 = num1 / 10;
+                c = cube / i;
+                
+            }
+            return c;
+
+        }
         static void Main(string[] args)
         {
             AllMethods s = new AllMethods();
@@ -80,6 +96,11 @@ namespace firstdotNETproject.Loops
             int Num = int.Parse(Console.ReadLine());
             int cube = s.CubeSumOfDigit(Num);
             Console.WriteLine($"The Cube Of Sum Of Digits This Number Is {cube}");
+
+            Console.WriteLine("Enter The Number For Find Out The Average Of Digits");
+            int num1 = int.Parse(Console.ReadLine());
+            int c= s.AvgOfDigits(num1);
+            Console.WriteLine($"The Average Of Digits Is {c}");
 
 
         }
