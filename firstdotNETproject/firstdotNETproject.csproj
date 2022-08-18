@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-  <StartupObject>firstdotNETproject.Loops.SumOfDigits</StartupObject>
+  <StartupObject>firstdotNETproject.Loops.MagicNum</StartupObject>
   </PropertyGroup>
 
 </Project>
