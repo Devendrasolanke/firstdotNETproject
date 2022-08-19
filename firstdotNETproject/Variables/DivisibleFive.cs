@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace firstdotNETproject.Arrays
+namespace firstdotNETproject.Variables
 {
     class DivisibleFive
     {
