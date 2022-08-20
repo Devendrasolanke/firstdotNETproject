@@ -6,6 +6,7 @@ namespace firstdotNETproject.Loops
 {
     class AllMethods
     {
+        int cpynum;
         public void Show()
         {
             Console.WriteLine("In This Program We See The Four Types of Methods\n1. No Return Type No Parameter\n2. No Return Type With Parameter\n3. With Return Type No Parameter\n4. With Return Type and Parameter");
@@ -47,7 +48,7 @@ namespace firstdotNETproject.Loops
         public int CubeSumOfDigit(int Num)
         {
             int cube = 0;
-            int cpy = Num;
+            cpynum = Num;
             for (int i = 1; i <= Num; i++)
             {
                 int r = Num % 10;
@@ -96,6 +97,18 @@ namespace firstdotNETproject.Loops
             int Num = int.Parse(Console.ReadLine());
             int cube = s.CubeSumOfDigit(Num);
             Console.WriteLine($"The Cube Of Sum Of Digits This Number Is {cube}");
+
+            Console.WriteLine("Enter The Number for Find Out Number Is Aramstrong Or Not");
+            int num2 = int.Parse(Console.ReadLine());
+            int Aramstrong = s.CubeSumOfDigit(num2);
+            if (s.cpynum == Aramstrong)
+            {
+                Console.WriteLine("Aramstrong");
+            }
+            else
+            {
+                Console.WriteLine("Not Aramstrong");
+            }
 
             Console.WriteLine("Enter The Number For Find Out The Average Of Digits");
             int num1 = int.Parse(Console.ReadLine());
