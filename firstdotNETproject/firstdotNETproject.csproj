@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-  <StartupObject>firstdotNETproject.Loops.AllMethods</StartupObject>
+  <StartupObject>firstdotNETproject.Loops.IsTwinPrime</StartupObject>
   </PropertyGroup>
 
 </Project>
