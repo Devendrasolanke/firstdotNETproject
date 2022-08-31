@@ -26,7 +26,26 @@ namespace firstdotNETproject.OopsConcepts
             }
         }
 
-       
+       void Display()
+        {
+            bool isprime = true;
+            Console.WriteLine("Prime Numbers ");
+            for (int i=2;i<=500; i++)
+            {
+                for (int j=2;j<=500; j++)
+                {
+                    if (i!=j && i % j == 0)
+                    {
+                        isprime = false;
+                    }
+                }
+                if (isprime == true)
+                {
+                    Console.Write("\t"+i);
+                }
+                isprime = true;
+            }
+        }
         static void Main(string[] args)
         {
             NumPrimeOrNot Obj = new NumPrimeOrNot();
@@ -41,7 +60,7 @@ namespace firstdotNETproject.OopsConcepts
             {
                 Console.WriteLine("This not prime number");
             }
-            
+            Obj.Display();
         }
     }
 }
