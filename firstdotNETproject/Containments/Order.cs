@@ -1,0 +1,86 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace firstdotNETproject.Containments
+{
+    class Order
+    {
+        int OrderId;
+        string OrderDate;
+        Customer C;
+        Item I;
+
+        public Order(int orderId, string orderDate, Customer c, Item i)
+        {
+            OrderId = orderId;
+            OrderDate = orderDate;
+            C = c;
+            I = i;
+        }
+        static void Main(string[] args)
+        {
+            Address a1 = new Address("Nandurbar, Tal. Dist. Nandurbar", 425412);
+            Item i1 = new Item(321, "Pizza", 199);
+            Customer c1 = new Customer(1234, "Devendra Solanke", a1);
+            Order o1 = new Order(111, "31 Aug 2022", c1, i1);
+            Console.WriteLine("Customer Name : "+c1.CustomerName);
+            Console.WriteLine("Customer Id : "+c1.CustomerId);
+            Console.WriteLine("Customer Address : "+a1.Addresss);
+            Console.WriteLine("Customer Pincode : "+a1.Pincode);
+            Console.WriteLine("Customer Order Id : "+o1.OrderId);
+            Console.WriteLine("Customer Order Date : "+o1.OrderDate);
+            Console.WriteLine("Customer Itom Id : "+i1.ItomId);
+            Console.WriteLine("Customer Itom Name : "+i1.Itomname);
+            Console.WriteLine("Customer Itom Price : "+i1.Itomprice);
+        }
+    }
+    class Customer
+    {
+        int customerId;
+        string customerName;
+        Address A;
+
+        public Customer(int customerId, string customerName, Address a)
+        {
+            this.CustomerId = customerId;
+            this.CustomerName = customerName;
+            A1 = a;
+        }
+
+        public int CustomerId { get => customerId; set => customerId = value; }
+        public string CustomerName { get => customerName; set => customerName = value; }
+        internal Address A1 { get => A; set => A = value; }
+    }
+    class Address
+    {
+        string address;
+        int pincode;
+
+        public Address(string address, int pincode)
+        {
+            this.address = address;
+            this.Pincode = pincode;
+        }
+
+        public string Addresss { get => address; set => address = value; }
+        public int Pincode { get => pincode; set => pincode = value; }
+    }
+    class Item
+    {
+        int itomId;
+        string itomname;
+        int itomprice;
+
+        public Item(int itomId, string itomname, int itomprice)
+        {
+            this.ItomId = itomId;
+            this.Itomname = itomname;
+            this.Itomprice = itomprice;
+        }
+
+        public int ItomId { get => itomId; set => itomId = value; }
+        public string Itomname { get => itomname; set => itomname = value; }
+        public int Itomprice { get => itomprice; set => itomprice = value; }
+    }
+}
