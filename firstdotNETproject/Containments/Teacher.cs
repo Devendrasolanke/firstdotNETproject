@@ -4,43 +4,32 @@ using System.Text;
 
 namespace firstdotNETproject.Containments
 {
-    class Teacher
+       
+    abstract class Teacher
     {
         int TeacherId;
         string TeacherName;
-        long TeacherMob;
+        long TeacherMobNo;
 
-        public Teacher(int teacherId, string teacherName, long teacherMob)
+        protected Teacher(int teacherId, string teacherName, long teacherMobNo)
         {
-            TeacherId1 = teacherId;
-            TeacherName1 = teacherName;
-            TeacherMob1 = teacherMob;
+            TeacherId = teacherId;
+            TeacherName = teacherName;
+            TeacherMobNo = teacherMobNo;
         }
 
         public int TeacherId1 { get => TeacherId; set => TeacherId = value; }
         public string TeacherName1 { get => TeacherName; set => TeacherName = value; }
-        public long TeacherMob1 { get => TeacherMob; set => TeacherMob = value; }
+        public long TeacherMobNo1 { get => TeacherMobNo; set => TeacherMobNo = value; }
 
-        
-
-        static void Main(string[] args)
-        {
-            Teacher t1 = new Teacher(1234, "Deepa Mam", 9087654321);
-            HourlyBased h1 = new HourlyBased("Rs.200/Hr", 8);
-            SalaryBased s1 = new SalaryBased(50000);
-            Console.WriteLine("Teacher Name : "+t1.TeacherName1);
-            Console.WriteLine("Teacher Id : "+t1.TeacherId1);
-            Console.WriteLine("Teacher Mob : "+t1.TeacherMob1);
-            Console.WriteLine("Hourly Based Salery : "+h1.RatePerHour1);
-            Console.WriteLine("Salery Based : "+s1.Salary1+" Rs.");
-        }
+        public abstract void salary();
     }
-    class HourlyBased
+    class HourlyBased:Teacher
     {
         string RatePerHour;
         int Hours;
 
-        public HourlyBased(string ratePerHour, int hours)
+        public HourlyBased(string ratePerHour, int hours, int teacherId, string teacherName, long teacherMobNo):base(teacherId,teacherName,teacherMobNo)
         {
             RatePerHour1 = ratePerHour;
             Hours1 = hours;
@@ -49,26 +38,37 @@ namespace firstdotNETproject.Containments
         public string RatePerHour1 { get => RatePerHour; set => RatePerHour = value; }
         public int Hours1 { get => Hours; set => Hours = value; }
 
-        void salary()
+        public override void salary()
         {
-            Console.WriteLine("Rs/Hr : "+Hours1);
+            Console.WriteLine("Rate per Hour : "+RatePerHour);
         }
     }
-    class SalaryBased
+    class SalaryBased:Teacher
     {
-        int salary;
+        int Salary;
 
-        public SalaryBased(int salary)
+        public SalaryBased(int salary, int teacherId, string teacherName, long teacherMobNo):base( teacherId, teacherName, teacherMobNo)
         {
-            this.Salary1 = salary;
+            Salary1 = salary;
         }
 
-        public int Salary1 { get => salary; set => salary = value; }
+        public int Salary1 { get => Salary; set => Salary = value; }
 
-        void Salary()
+        public override void salary()
         {
             Console.WriteLine("Monthly Salary : "+Salary1);
         }
-
+    }
+    class CheckTeacher
+    {
+        static void Main(string[] args)
+        {
+            HourlyBased Hobj = new HourlyBased("300 Rs/hr", 8, 112, "Deepa Shah", 9876543210);
+            SalaryBased SalObj = new SalaryBased(45000, 123, "Kalyani A", 0987654321);
+            Console.WriteLine("Teacher Name : "+Hobj.TeacherName1);
+            Console.WriteLine("Teacher Id : "+Hobj.TeacherId1);
+            Console.WriteLine($"Salary per month {SalObj.Salary1}");
+            Console.WriteLine($"Rate per hour {Hobj.RatePerHour1}");
+        }
     }
 }

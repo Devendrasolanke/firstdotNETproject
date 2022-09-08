@@ -9,7 +9,10 @@ namespace firstdotNETproject.Containments
         int id;
         string name;
         vehicle v;
+        Person()
+        {
 
+        }
         public Person(int id, string name, vehicle v)
         {
             this.id = id;
@@ -22,15 +25,18 @@ namespace firstdotNETproject.Containments
             Person p1 = new Person(123, "Devendra Solanke", v1);
             Console.WriteLine("Person Name : "+p1.name);
             Console.WriteLine("Person Id : "+p1.id);
-            Console.WriteLine("Vehicle Name : "+v1.Vehicle_name1);
-            Console.WriteLine("Vehicle Id : "+v1.Vehicle_Id1);
+            Console.WriteLine("Vehicle Name : "+p1.v.Vehicle_name1);
+            Console.WriteLine("Vehicle Id : "+p1.v.Vehicle_Id1);
         }
     }
     class vehicle
     {
         int Vehicle_Id;
         string Vehicle_name;
+        vehicle()
+        {
 
+        }
         public vehicle(int vehicle_Id, string vehicle_name)
         {
             Vehicle_Id1 = vehicle_Id;

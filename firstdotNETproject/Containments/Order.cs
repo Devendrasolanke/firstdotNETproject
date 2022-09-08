@@ -10,7 +10,10 @@ namespace firstdotNETproject.Containments
         string OrderDate;
         Customer C;
         Item I;
+        Order()
+        {
 
+        }
         public Order(int orderId, string orderDate, Customer c, Item i)
         {
             OrderId = orderId;
@@ -24,15 +27,15 @@ namespace firstdotNETproject.Containments
             Item i1 = new Item(321, "Pizza", 199);
             Customer c1 = new Customer(1234, "Devendra Solanke", a1);
             Order o1 = new Order(111, "31 Aug 2022", c1, i1);
-            Console.WriteLine("Customer Name : "+c1.CustomerName);
-            Console.WriteLine("Customer Id : "+c1.CustomerId);
-            Console.WriteLine("Customer Address : "+a1.Addresss);
-            Console.WriteLine("Customer Pincode : "+a1.Pincode);
+            Console.WriteLine("Customer Name : "+o1.C.CustomerName);
+            Console.WriteLine("Customer Id : "+o1.C.CustomerId);
+            Console.WriteLine("Customer Address : "+o1.C.A1.Addresss);
+            Console.WriteLine("Customer Pincode : "+o1.C.A1.Pincode);
             Console.WriteLine("Customer Order Id : "+o1.OrderId);
             Console.WriteLine("Customer Order Date : "+o1.OrderDate);
-            Console.WriteLine("Customer Itom Id : "+i1.ItomId);
-            Console.WriteLine("Customer Itom Name : "+i1.Itomname);
-            Console.WriteLine("Customer Itom Price : "+i1.Itomprice);
+            Console.WriteLine("Customer Itom Id : "+o1.I.ItomId);
+            Console.WriteLine("Customer Itom Name : "+o1.I.Itomname);
+            Console.WriteLine("Customer Itom Price : "+o1.I.Itomprice);
         }
     }
     class Customer
@@ -40,7 +43,10 @@ namespace firstdotNETproject.Containments
         int customerId;
         string customerName;
         Address A;
+        Customer()
+        {
 
+        }
         public Customer(int customerId, string customerName, Address a)
         {
             this.CustomerId = customerId;
@@ -56,7 +62,10 @@ namespace firstdotNETproject.Containments
     {
         string address;
         int pincode;
+        Address()
+        {
 
+        }
         public Address(string address, int pincode)
         {
             this.address = address;
@@ -71,7 +80,10 @@ namespace firstdotNETproject.Containments
         int itomId;
         string itomname;
         int itomprice;
+        Item()
+        {
 
+        }
         public Item(int itomId, string itomname, int itomprice)
         {
             this.ItomId = itomId;

@@ -9,7 +9,10 @@ namespace firstdotNETproject.Containments
         string studname;
         int passoutyear;
         Batch b;
+        Student()
+        {
 
+        }
         public Student(string studname, int passoutyear, Batch b)
         {
             this.Studname = studname;
@@ -26,7 +29,10 @@ namespace firstdotNETproject.Containments
         string batchname;
         string technology;
         Trainer t;
+        Batch()
+        {
 
+        }
         public Batch(string batchname, string technology, Trainer t)
         {
             this.Batchname = batchname;
@@ -43,7 +49,10 @@ namespace firstdotNETproject.Containments
         string trainername;
         string qualification;
         int experience;
+        Trainer()
+        {
 
+        }
         public Trainer(string trainername, string qualification, int experience)
         {
             this.Trainername = trainername;
@@ -62,11 +71,11 @@ namespace firstdotNETproject.Containments
             Student s1 = new Student("Devendra Solanke", 2020, b1);
             Console.WriteLine("Student Name : "+s1.Studname);
             Console.WriteLine("Student Pass Out Year : "+s1.Passoutyear);
-            Console.WriteLine("Student Batch : " + b1.Batchname);
-            Console.WriteLine("Technology : "+b1.Technology);
-            Console.WriteLine("Trainer Name : "+t1.Trainername);
-            Console.WriteLine("Qualification :"+t1.Qualification);
-            Console.WriteLine("Experience : "+t1.Experience+" Years");
+            Console.WriteLine("Student Batch : " +s1.B.Batchname);
+            Console.WriteLine("Technology : "+s1.B.Technology);
+            Console.WriteLine("Trainer Name : "+s1.B.T.trainername);
+            Console.WriteLine("Qualification :"+s1.B.T.qualification);
+            Console.WriteLine("Experience : "+s1.B.T.Experience+" Years");
 
         }
     }
