@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-  <StartupObject>firstdotNETproject.CallByValueAndRef.CallByValue</StartupObject>
+  <StartupObject>firstdotNETproject.Excercises.Pattern19</StartupObject>
   </PropertyGroup>
 
 </Project>

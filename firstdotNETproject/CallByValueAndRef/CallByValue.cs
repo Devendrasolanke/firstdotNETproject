@@ -15,23 +15,28 @@ namespace firstdotNETproject.CallByValueAndRef
         }
         static void Main(string[] args)
         {
-            int x = 20, y = 30;
-            Method1(x,y);
-            Console.WriteLine($"{x},{y}");
+            int a = 20, b = 30;
+            Method1(a,b);
+            Console.WriteLine("After Swapping value of a & b veriables with call by value");
+            Console.WriteLine($"{a},{b}");
         }
     }
     class CallByRef
     {
-        static int Method2(ref int a, ref int b)
+        static void Method2(ref int a, ref int b)
         {
-            int c = a + b;
-            return c;
+            int swap = a;
+            a = b;
+            b = swap;
         }
         static void Main(string[] args)
         {
             int a = 10, b = 20;
-            int c=Method2(ref a,ref b);
-            Console.WriteLine(c);
+            Console.WriteLine("Before swapping the values a & b");
+            Console.WriteLine($"a={a}, b{b}");
+            Method2(ref a,ref b);
+            Console.WriteLine("After swapping values of a & b variables with call by ref");
+            Console.WriteLine($"a={a}, b={b}");
         }
     }
    
