@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-  <StartupObject>firstdotNETproject.Excercises.Pattern19</StartupObject>
+  <StartupObject>firstdotNETproject.Assingment10Sept.StaticNonStaticWithParameter</StartupObject>
   </PropertyGroup>
 
 </Project>
