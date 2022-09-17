@@ -55,4 +55,21 @@ namespace firstdotNETproject.Loops
 
         }
     }
+    class fibbo
+    {
+        static void Main(string[] args)
+        {
+            int[] arr = new int[10];
+            int a = 0, b = 1, sum;
+            for (int i=0; i<10; i++)
+            {
+                sum = a + b;
+                Console.WriteLine(a);
+                arr[i] = a;
+                a = b;
+                b = sum;
+            }
+            
+        }
+    }
 }

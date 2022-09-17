@@ -84,4 +84,54 @@ namespace firstdotNETproject.Arrays
             }
         }
     }
+    class ArrayMerg
+    {
+        static void PrintArray(int[] a)
+        {
+            for(int i=0; i<a.Length; i++)
+            {
+                Console.Write(a[i]+" ");
+            }
+        }
+        static void RandomMerging()
+        {
+            int[] d = { 12, 13, 14, 15 };
+            int[] e = { 16, 17, 18, 19, 20 };
+            int[] f = new int[d.Length + e.Length];
+
+            int count = 0;
+            for (int i = 0; i < d.Length; i++)
+            {
+                f[count] = d[i];
+                count++;
+                f[count] = e[i];
+                count++;
+                
+            }
+
+        } 
+        static void Main(string[] args)
+        {
+            int[] a = { 12, 13, 14, 15 };
+            int[] b = { 16, 17, 18, 19, 20 };
+            int[] c = new int[a.Length + a.Length];
+            for(int i=0; i<a.Length; i++)
+            {
+                c[i] = a[i];
+                
+            }
+            for(int j=0; j<b.Length; j++)
+            {
+                c[a.Length+1] = b[j];
+            }
+            
+
+
+            RandomMerging();
+            PrintArray(a);
+
+
+        }
+    }
+
 }
