@@ -389,5 +389,76 @@ namespace firstdotNETproject.Arrays
             CalDuplicates(arr, count);
         }
     }
+    class PosNegMerg
+    {
+        static void PosNeg(int[] a)
+        {
+            int pc = 0, nc=0;
+            for (int i=0; i<a.Length; i++)
+            {
+                if (a[i] >= 0)
+                {
+                    pc++;
+                }
+                else
+                {
+                   nc++;
+                }
+            }
+            int[] neg = new int[nc];
+            int[] other = new int[pc];
+            nc = 0;
+            pc = 0;
+            for (int i = 0; i < a.Length; i++)
+            {
+                if (a[i] >= 0)
+                {
+                    other[pc] = a[i];
+                    pc++;
+                }
+                else
+                {
+                    neg[nc] = a[i];
+                    nc++;
+                }
+            }
+            int[] merg = new int[pc + nc];
+            nc = 0;
+            for (int i=0; i<merg.Length; i++)
+            {
+                if (i<other.Length && i < neg.Length)
+                {
+                    merg[nc] = neg[i];
+                    nc++;
+                    merg[nc] = other[i];
+                    nc++;
+                }
+                else  if (i < other.Length)
+                {
+                    merg[nc] = other[i];
+                    nc++;
+                }
+                else if (i < neg.Length)
+                {
+                    merg[nc] = neg[i];
+                    nc++;
+                }
+            }
 
+            Print<int>.MyArray(merg);
+
+        }
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the  size of array");
+            int size = int.Parse(Console.ReadLine());
+            int[] a = new int[size];
+            Console.WriteLine("Enter array elements");
+            for(int i=0; i<size; i++)
+            {
+                a[i] = int.Parse(Console.ReadLine());
+            }
+            PosNeg(a);
+        }
+    }
 }
