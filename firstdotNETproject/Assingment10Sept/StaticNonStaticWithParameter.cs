@@ -38,4 +38,15 @@ namespace firstdotNETproject.Assingment10Sept
             s.Method4(a, b);
         }
     }
+    class StaticConstructor
+    {
+        static StaticConstructor()
+        {
+            Console.WriteLine("this is static constructor");
+        }
+        static void Main(string[] args)
+        {
+
+        }
+    }
 }

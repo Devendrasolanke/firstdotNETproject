@@ -3,7 +3,11 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-  <StartupObject>firstdotNETproject.Arrays.PosNegMerg</StartupObject>
+  <StartupObject>firstdotNETproject.Assignment24Sept.frqOfMobNo</StartupObject>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="ConstructorChaining\" />
+  </ItemGroup>
 
 </Project>
