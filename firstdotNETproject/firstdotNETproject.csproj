@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-  <StartupObject>firstdotNETproject.Assignment24Sept.frqOfMobNo</StartupObject>
+  <StartupObject>firstdotNETproject.StringTopic.Functions</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>

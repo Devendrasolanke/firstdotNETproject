@@ -160,8 +160,8 @@ namespace firstdotNETproject.Assignment24Sept
             {
                 pos++;
                 r = mn % 10;
-                //if (IsPresent(mn, r, pos) == false)
-                //{
+                if (IsPresent(mn, r, pos) == false)
+                {
                     int c = 1;
                     for (int j=0; j<10; j++)
                     {
@@ -171,8 +171,7 @@ namespace firstdotNETproject.Assignment24Sept
                         mn = mn / 10;
                     }
                     Console.WriteLine($"frequency of {r} is : " + c);
-                //}
-                
+                }
                 mn = mn / 10;
             }
 
@@ -252,6 +251,22 @@ namespace firstdotNETproject.Assignment24Sept
             Console.WriteLine("Enter the number");
             int num = int.Parse(Console.ReadLine());
             CheckNum(num);
+        }
+    }
+    class Xyz
+    {
+        static void Main(string[] args)
+        {
+            string s = "Devendra";
+            string a = "";
+            for (int i = 0; i < s.Length; i++)
+            {
+                if (s[i] != 'e')
+                {
+                    a = a+ s[i];
+                }
+                Console.WriteLine(a);
+            }
         }
     }
 }
