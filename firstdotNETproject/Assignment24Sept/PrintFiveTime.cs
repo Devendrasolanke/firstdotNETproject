@@ -140,7 +140,7 @@ namespace firstdotNETproject.Assignment24Sept
             NonRep(q);
         }
     }
-    class frqOfMobNo
+    /*class frqOfMobNo
     {
         static bool IsPresent(long mn,long num, long currentpos)
         {
@@ -155,15 +155,14 @@ namespace firstdotNETproject.Assignment24Sept
         }
         static void FindFrqOfMob(long mn)
         {
-            long r,pos=0;
+            long r;
             for (int i=0; i<10; i++)
             {
-                pos++;
                 r = mn % 10;
-                if (IsPresent(mn, r, pos) == false)
+                if (IsPresent(mn, r, i) == false)
                 {
                     int c = 1;
-                    for (int j=0; j<10; j++)
+                    for (int j=i+1; j<10-1; j++)
                     {
                         int r1 = (int)mn % 10;
                         if (r1 == r)
@@ -182,14 +181,14 @@ namespace firstdotNETproject.Assignment24Sept
             long mob = long.Parse(Console.ReadLine());
             FindFrqOfMob(mob);
         }
-    }
+    }*/
     class CommonChar
     {
         static bool IsPresent(char ch, int pos, string nm)
         {
             for(int i=0; i<pos; i++)
             {
-                if (nm[i] == ch)
+                if (nm[i] == nm[pos])
                     return true;
             }
             return false;
@@ -253,20 +252,49 @@ namespace firstdotNETproject.Assignment24Sept
             CheckNum(num);
         }
     }
-    class Xyz
+    
+    class frqOfMob
     {
+        static void findfrq(long mob)
+        {
+            long r;
+            int zeroc=0,onec=0,twoc=0,threec=0,fourc=0,fivec=0,sixc=0,sevenc=0,eigthc=0,ninec = 0;
+            while (mob > 0)
+            {
+                r = mob % 10;
+                switch (r)
+                {
+                    case 0: zeroc++;
+                        break;
+                    case 1: onec++;
+                        break;
+                    case 2: twoc++;
+                        break;
+                    case 3:  threec++;
+                        break;
+                    case 4: fourc++;
+                        break;
+                    case 5: fivec++;
+                        break;
+                    case 6: sixc++;
+                        break;
+                    case 7: sevenc++;
+                        break;
+                    case 8: eigthc++;
+                        break;
+                    case 9: ninec++;
+                        break;
+                        
+                }
+                mob = mob / 10;
+            }
+            Console.WriteLine($"frequency of 0 : {zeroc}\nfrequency of 1 : {onec}\nfrequency of 2 : {twoc}\nfrequency of 3 : {threec}\nfrequency of 4 : {fourc}\nfrequency of 5 : {fivec}\nfrequency of 6 : {sixc}\nfrequency of 7 : {sevenc}\nfrequency of 8 : {eigthc}\nfrequency of 9 : {ninec}");
+        }
         static void Main(string[] args)
         {
-            string s = "Devendra";
-            string a = "";
-            for (int i = 0; i < s.Length; i++)
-            {
-                if (s[i] != 'e')
-                {
-                    a = a+ s[i];
-                }
-                Console.WriteLine(a);
-            }
+            Console.WriteLine("Enter the mobile number");
+            long mob = long.Parse(Console.ReadLine());
+            findfrq(mob);
         }
     }
 }
